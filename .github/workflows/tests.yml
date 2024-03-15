@@ -23,7 +23,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install Dependencies
       run: |
-        apt install postgresql
+        sudo apt install postgresql
         pip install poetry
         poetry export --without-hashes -f requirements.txt --output ./requirements.txt
         pip install -r requirements.txt
